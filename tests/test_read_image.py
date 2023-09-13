@@ -5,7 +5,7 @@ import pytest
 from brightest_patch import read_image
 
 def test_read_image_color() -> None:
-    image_path = './img.jpg'
+    image_path = './img.png'
     img = read_image(image_path)
 
     assert isinstance(img, np.ndarray)
@@ -14,7 +14,7 @@ def test_read_image_color() -> None:
     assert img.shape[1]  > 0
 
 def test_read_image_gray() -> None:
-    image_path = './img.jpg'
+    image_path = './img.png'
     img = read_image(image_path, grayscale=True)
 
     assert isinstance(img, np.ndarray)
