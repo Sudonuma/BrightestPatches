@@ -18,6 +18,8 @@ Before using this script, ensure you have the following prerequisites installed:
 - Python 3.9
 - OpenCV 
 - NumPy 
+- pytest
+- argparse
 
 You can install the necessary Python packages using pip:
 
@@ -86,6 +88,3 @@ The main function parses command-line arguments, extracts patches, identifies th
 Currently, The `four_brightest_patches` function retains the first patch in the sorted array when two patches overlap and have the same brightness. However, a more logical approach would be to favor the least overlapping patch. For instance, if we choose the first patch, there's a possibility that two other bright patches overlap with it, leading to the exclusion of even brighter patches.
 
 To further optimize the function `extract_patches`'s performance, we can use Python multithreading to reduce the computation time.
-
-## ToDo
-Add more tests.

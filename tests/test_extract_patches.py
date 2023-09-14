@@ -3,7 +3,8 @@ import numpy as np
 import pytest
 
 from brightest_patch import extract_patches
-
+# add more test.
+# add tests for corners calculations.
 @pytest.fixture
 def sample_image_path():
 
