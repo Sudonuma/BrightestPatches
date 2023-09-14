@@ -7,6 +7,7 @@ This Python script is designed identify the four brightest patches within an ima
 - [Usage](#usage)
 - [Explanation](#explanation)
 - [Improvements](#improvements)
+- [ToDo](#ToDo)
 
 
 
@@ -38,7 +39,11 @@ The project also includes a test image thus you can simply run:
 ```bash
 python main.py
 ```
+3. Run the tests.
 
+```bash
+cd BrightestPatches && pytest
+```
 
 ## Explanation
 
@@ -81,3 +86,6 @@ The main function parses command-line arguments, extracts patches, identifies th
 Currently, The `four_brightest_patches` function retains the first patch in the sorted array when two patches overlap and have the same brightness. However, a more logical approach would be to favor the least overlapping patch. For instance, if we choose the first patch, there's a possibility that two other bright patches overlap with it, leading to the exclusion of even brighter patches.
 
 To further optimize the function `extract_patches`'s performance, we can use Python multithreading to reduce the computation time.
+
+## ToDo
+Add more tests.
