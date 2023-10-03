@@ -3,4 +3,4 @@ numpy
 pytest
 argparse
 fastapi
-uvicorn
+uvicorn==0.20.0
