@@ -5,3 +5,4 @@ argparse
 fastapi
 uvicorn==0.20.0
 gunicorn
+python-multipart
