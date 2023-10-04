@@ -7,7 +7,6 @@ import numpy as np
 import brightest_patch
 from fastapi.staticfiles import StaticFiles
 import time
-import aiofile
 
 
 app = FastAPI()
@@ -34,9 +33,9 @@ os.makedirs(static_folder, exist_ok=True)
 
 app.mount("/static", StaticFiles(directory=static_folder), name="static")
 
-# @app.get("/")
-# async def main():
-#     return {"message": "Hello World"}
+@app.get("/")
+async def main():
+    return {"message": "Hello World"}
 
 
 @app.post("/process-image")
@@ -78,9 +77,3 @@ async def upload_image(file: UploadFile):
 # favicon.ico
 # timestamp for the input too? (yes to solve problems with input with the same name)
 
-# Serve the HTML file
-@app.get("/")
-async def get_upload_page():
-    async with aiofile.AIOFile('frontend/brightest_patches.html', 'rb') as f:
-        html = await f.read()
-    return html.decode('utf-8')
