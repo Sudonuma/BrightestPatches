@@ -79,4 +79,5 @@ async def upload_image(file: UploadFile):
 # Serve the HTML file
 @app.get("/")
 async def get_upload_page():
-    return await open("frontend/brightest_patches.html", "rb").read()
+    html = await open("frontend/brightest_patches.html", "rb").read().decode("utf-8")
+    return html
