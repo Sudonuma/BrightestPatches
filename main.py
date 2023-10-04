@@ -34,9 +34,9 @@ os.makedirs(static_folder, exist_ok=True)
 
 app.mount("/static", StaticFiles(directory=static_folder), name="static")
 
-# @app.get("/")
-# async def main():
-#     return {"message": "Hello World"}
+@app.get("/")
+async def main():
+    return {"message": "Hello World"}
 
 
 @app.post("/process-image")
