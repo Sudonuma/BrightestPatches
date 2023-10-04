@@ -79,8 +79,8 @@ async def upload_image(file: UploadFile):
 # timestamp for the input too? (yes to solve problems with input with the same name)
 
 # Serve the HTML file
-@app.get("/")
-async def get_upload_page():
-    async with aiofile.AIOFile('static/brightest_patches.html', 'rb') as f:
-        html = await f.read()
-    return html.decode('utf-8')
+# @app.get("/")
+# async def get_upload_page():
+#     async with aiofile.AIOFile('static/brightest_patches.html', 'rb') as f:
+#         html = await f.read()
+#     return html.decode('utf-8')
