@@ -76,7 +76,7 @@ document.body.addEventListener("click", (event) => {
     // Check if the clicked element has the ID "results"
     if (event.target.id === "results") {
         // Set the image source to the loaded file data URL
-        resultImage.src = 'static/' + resultPath;
+        resultImage.src = resultPath;
         // console.log(resultPath)
 
         // Display the uploaded image
