@@ -7,6 +7,8 @@ import numpy as np
 import brightest_patch
 from fastapi.staticfiles import StaticFiles
 import time
+import aiofile
+
 
 app = FastAPI()
 
@@ -79,5 +81,6 @@ async def upload_image(file: UploadFile):
 # Serve the HTML file
 @app.get("/")
 async def get_upload_page():
-    html = await open("frontend/brightest_patches.html", "rb").read().decode("utf-8")
-    return html
+    async with aiofile.AIOFile('frontend/brightest_patches.html', 'rb') as f:
+        html = await f.read()
+    return html.decode('utf-8')
