@@ -42,7 +42,7 @@ fileInput.addEventListener("change", () => {
         const formData = new FormData();
         formData.append("file", file);
 
-        fetch("http://localhost:8000/process-image", {
+        fetch("https://brightest-patches.onrender.com/process-image", {
             method: "POST",
             body: formData,
         })
