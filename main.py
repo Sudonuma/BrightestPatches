@@ -76,3 +76,7 @@ async def upload_image(file: UploadFile):
 # favicon.ico
 # timestamp for the input too? (yes to solve problems with input with the same name)
 
+# Serve the HTML file
+@app.get("/upload")
+async def get_upload_page():
+    return await open("frontend/brightest_patches.html", "rb").read()
