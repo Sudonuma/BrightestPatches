@@ -1,4 +1,4 @@
-# BrightestPatches
+# BrightestPatches (README.md is outdated)
 
 This Python script is designed identify the four brightest patches within an image. It then calculates the area of the quadrilateral formed by connecting the centers of these brightest patches. This README file provides an overview of the script's functionality, usage, and requirements.
 
